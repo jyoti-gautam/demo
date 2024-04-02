@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Hello world</title>
+</head>
+<body>
+<h1>AWS S3 demo</h1>
+
+<img src="s3.png" width=300/>
+
+<div id="div1"></div>
+<script>
+	var div1 = document.getElementById("div1");
+
+	fetch("http://awsindia2.s3-website-us-east-1.amazonaws.com/cors.html")
+	.then((response) => {
+	  return response.text();
+	})
+	.then((html)  =>  {
+		div1.innerHTML = html
+	});
+</script>
+</body>
+</html>
+
+last line added
